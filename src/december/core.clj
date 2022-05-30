@@ -27,3 +27,7 @@
   (mfns/my-function 7 6)
   (mfns/my-function 5 4 3)
   )
+
+(defn map-to-list [coll-of-maps req-key]
+  (let [list-of-maps (flatten (map (juxt req-key) coll-of-maps))]
+    list-of-maps))
