@@ -3,6 +3,11 @@
             [december.dogscats :as dnc]
             [december.multipleFns :as mfns]))
 
+(defn dissoc-from-map []
+  (let [nested-map-a '{:a "a", :b {:aa "aa", :bb "bb"}}
+        dissociated-map-a (update-in nested-map-a [:b] dissoc :bb)]
+    dissociated-map-a))
+
 (defn foo
   "I don't do a whole lot."
   [x]
