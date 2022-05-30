@@ -31,3 +31,8 @@
 (defn map-to-list [coll-of-maps req-key]
   (let [list-of-maps (flatten (map (juxt req-key) coll-of-maps))]
     list-of-maps))
+
+(defn call-all-functions []
+  (let [list-of-maps '({:a "A1" :b "B1"} {:a "A2" :b "B2"} {:a "A3" :b "B3"})
+        vec-of-maps '[{:a "A" :b "B"}{:a "AA" :b "BB"}]]
+    (map-to-list list-of-maps :a)))
