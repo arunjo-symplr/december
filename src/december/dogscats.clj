@@ -1,6 +1,8 @@
 (ns december.dogscats
   (:require [clojure.string :as str]))
 
+(def git-branch-name "my-local")
+
 (def word_freq (atom {}))
 
 (defn string-to-hashmap [sent]
