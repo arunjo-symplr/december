@@ -19,6 +19,7 @@
   ([x y z] (three-arg-fn x y z))
   )
 
-(defn new-fn [&args]
-
-  )
+(defn new-function [&args]
+  (my-function)
+  (my-function 34)
+  (my-function 45))
